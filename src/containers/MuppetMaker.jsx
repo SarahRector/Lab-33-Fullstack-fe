@@ -6,7 +6,7 @@ export const MuppetMaker = () => {
   const [name, setName] = useState('');
   const [performer, setPerformer] = useState('');
   const [image, setImage] = useState('');
-  //const history = useHistory;
+  //const history = useHistory();
 
   const handleChange = ({ target }) => {
     if(target.name === 'name') setName(target.value);
@@ -18,7 +18,7 @@ export const MuppetMaker = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     postMuppet(name, performer, image)
-      //.then (() => history.push('/'));
+      //.then (() => history.push('/'))
       .then(console.log);
 
 

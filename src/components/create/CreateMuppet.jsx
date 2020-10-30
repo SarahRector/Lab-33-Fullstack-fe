@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const CreateMuppet = ({ name, performer, image, onChange, onSubmit }) => (
+const CreateMuppet = ({ onChange, onSubmit }) => (
   <>
     <form onSubmit={onSubmit}>
       <label htmlFor="name">Muppet Name</label>
@@ -9,7 +9,6 @@ const CreateMuppet = ({ name, performer, image, onChange, onSubmit }) => (
         id="name"
         type="text"
         name="name"
-        //value={name}
         onChange={onChange}
       />
 
@@ -18,7 +17,6 @@ const CreateMuppet = ({ name, performer, image, onChange, onSubmit }) => (
         id="performer"
         type="text"
         name="performer"
-        //value={performer}
         onChange={onChange}
       />
 
@@ -27,7 +25,6 @@ const CreateMuppet = ({ name, performer, image, onChange, onSubmit }) => (
         id="image"
         type="text"
         name="image"
-        //value={image}
         onChange={onChange}
       />
 
