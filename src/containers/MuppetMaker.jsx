@@ -24,6 +24,7 @@ export const MuppetMaker = () => {
 
   };
 
+
   return (
     <div>
       <CreateMuppet 
