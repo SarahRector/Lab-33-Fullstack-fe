@@ -1,9 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MuppetDetail from './MuppetDetail';
+import { useState, useEffect } from 'react';
+import { getMuppets } from '../../services/muppetApi';
 
-const MuppetList = ({ muppetDetails }) => {
-  const muppetElements = muppetDetails.map(muppetDetail => (
+const MuppetList = () => {
+  const [muppets, setMuppets] = useState([]);
+  //const history = useHistory();
+
+  useEffect(() => {
+    getMuppets()
+      .then(muppets => setMuppets(muppets));
+  }, []);
+  const muppetElements = muppets.map(muppetDetail => (
     <li key={`${muppetDetail.name}-${muppetDetail.performer}`}>
       <a key={muppetDetail.name} href={`/${muppetDetail.id}`}>
         <MuppetDetail {...muppetDetail} />
@@ -23,7 +32,7 @@ MuppetList.propTypes = {
     name: PropTypes.string.isRequired,
     performer: PropTypes.string,
     image: PropTypes.string
-  })).isRequired
+  }))
 };
 
 export default MuppetList;

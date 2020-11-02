@@ -10,7 +10,7 @@ const MuppetDetail = ({ name, performer, image }) => (
 );
 
 MuppetDetail.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   performer: PropTypes.string,
   image: PropTypes.string
 };
