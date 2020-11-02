@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MuppetDetail component renders MuppetDetail 1`] = `
+<DocumentFragment>
+  <div
+    data-testid="details"
+  >
+    <h1>
+      Kermit
+    </h1>
+    <p>
+      Performed By: Jim Henson
+    </p>
+    <img
+      alt="Kermit"
+      src="test.png"
+    />
+  </div>
+</DocumentFragment>
+`;
