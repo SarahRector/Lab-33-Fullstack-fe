@@ -13,7 +13,7 @@ const MuppetList = () => {
       .then(muppets => setMuppets(muppets));
   }, []);
   const muppetElements = muppets.map(muppetDetail => (
-    <li key={`${muppetDetail.name}-${muppetDetail.performer}`}>
+    <li key={`${muppetDetail.performer}`}>
       <a key={muppetDetail.name} href={`/${muppetDetail.id}`}>
         <MuppetDetail {...muppetDetail} />
       </a>

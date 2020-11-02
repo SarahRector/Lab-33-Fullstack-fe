@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 export const getMuppets = () => {
-  return fetch('http://localhost:7891/api/v1/muppets')
+  return fetch('http://localhost:7890/api/v1/muppets')
     .then(res => res.json())
     .then(json => json.map(muppet => ({
       id: muppet.id,
@@ -11,7 +11,7 @@ export const getMuppets = () => {
 };
 
 export const postMuppet = (name, performer, image) => {
-  return fetch('http://localhost:7891/api/v1/muppets', {
+  return fetch('http://localhost:7890/api/v1/muppets', {
     method: 'POST',
     headers: ({ 'Content-Type': 'application/json' }),
     body: JSON.stringify({ name, performer, image })
@@ -20,7 +20,7 @@ export const postMuppet = (name, performer, image) => {
 };
 
 export const getMuppetById = (id) => {
-  return fetch(`http://localhost:7891/api/v1/muppets/${id}`, {
+  return fetch(`http://localhost:7890/api/v1/muppets/${id}`, {
     headers: {
       Origin: null
     }

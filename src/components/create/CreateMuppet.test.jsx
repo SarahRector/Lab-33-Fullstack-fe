@@ -10,8 +10,7 @@ describe('CreateMuppet component', () => {
       performer="Ted"
       image="test.png"
       onChange={() => {}}
-      onSubmit={() => {}}
-    />);
+      onSubmit={() => {}} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });
